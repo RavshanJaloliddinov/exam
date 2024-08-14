@@ -1,5 +1,6 @@
 import { fetchData } from "../database/postgres.js";
 
+// Create contract
 export async function createContract(req, res) {
     try{
         const {order_id, customer_id, contract_type_id, monthly_payment, contract_status, starting_payment_percent, total_payment} = req.body;
@@ -22,7 +23,7 @@ export async function createContract(req, res) {
         res.status(500).send("error creating contract");
     }
 }
-
+// get all contracts
 export async function getContracts(req, res) {
     try{
         const response = await fetchData("SELECT * FROM contracts");
@@ -32,7 +33,7 @@ export async function getContracts(req, res) {
         res.status(500).send("error fetching contracts");
     }
 }
-
+//get single contract
 export async function getContract(req, res) {
     try{
         const currentContractId = req.params.contractId;
@@ -45,6 +46,7 @@ export async function getContract(req, res) {
     }
 }
 
+// delete the contract
 export async function deleteContract(req, res) {
     try{
         const currentContractId = req.params.contractId;
@@ -57,6 +59,7 @@ export async function deleteContract(req, res) {
     }
 }
 
+// update the contract
 export async function updateContract(req, res) {
     try{
     const {order_id, customer_id, contract_type_id, monthly_payment, contract_status, starting_payment_percent, total_payment} = req.body;

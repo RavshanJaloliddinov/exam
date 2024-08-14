@@ -4,6 +4,7 @@ import { Router } from "express";
 
 const customerRoutes = Router();
 
+// Customers CRUD routes
 customerRoutes
     .post("/", addCustomer)
     .get("/", getCustomers)

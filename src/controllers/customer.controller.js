@@ -7,6 +7,8 @@ const form = formidable({
     uploadDir: "uploads"
 });
 
+
+// create a new customer
 export async function addCustomer(req, res) {
     try {
             const [fields,files] = await form.parse(req)
@@ -33,6 +35,7 @@ export async function addCustomer(req, res) {
     }
 }
 
+// get all customers
 export async function getCustomers(req, res) {
     try {
          
@@ -52,6 +55,7 @@ export async function getCustomers(req, res) {
     }
 }
 
+// get a single customer
 export async function getCustomer(req, res) {
     try {
          
@@ -71,7 +75,7 @@ export async function getCustomer(req, res) {
     }
 }
 
-
+// delete customer
 export async function deleteCustomer(req, res) {
     try {
          
@@ -91,7 +95,7 @@ export async function deleteCustomer(req, res) {
     }
 }
 
-
+// update customer
 export async function updateCustomer(req, res) {
     try {
         const id = req.params?.customerId;

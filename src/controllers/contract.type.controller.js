@@ -3,7 +3,7 @@ import { fetchData } from "../database/postgres.js";
 
 
 
-
+// create contract type
 export async function createContractType(req,res) {
        try{
             const {duration,percentage} = req.body;
@@ -14,6 +14,7 @@ export async function createContractType(req,res) {
        }
 }
 
+// get all contract types
 export async function getContractsType(req,res) {
     try{
         const response = await fetchData(`SELECT * FROM contract_type`)
@@ -23,7 +24,7 @@ export async function getContractsType(req,res) {
     }
 }
 
-
+// get contract type
 export async function getContractType(req,res) {
     try{
         const {id} = req.params;
@@ -35,6 +36,7 @@ export async function getContractType(req,res) {
     }
 }
 
+// delete contract type  by id  
 export async function deleteContractType(req,res) {
     try{
         const {id} = req.params;
@@ -44,6 +46,8 @@ export async function deleteContractType(req,res) {
         res.status(500).send({message: "Error deleting contract type"})
     }
 }
+
+// update contract type by id
 export async function updateContractType(req, res) {
         try{
             const { duration, percentage } = req.body;

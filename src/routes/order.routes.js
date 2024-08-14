@@ -3,7 +3,7 @@ import { deleteOrder, addOrder, getAllOrders, getOrder, updateOrder } from "../c
 
 const orderRoutes = Router()
 
-
+// order CRUD routes
 orderRoutes
     .post('/', addOrder)
     .get("/", getAllOrders)

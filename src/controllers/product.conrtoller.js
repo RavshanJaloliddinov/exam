@@ -8,6 +8,8 @@ const form = formidable({
     uploadDir: "uploads"
 });
 
+
+// Create a new product
 export async function addProduct(req, res) {
     try {
             const [fields,files] = await form.parse(req)
@@ -36,6 +38,9 @@ export async function addProduct(req, res) {
     }
 }
 
+
+
+// get product
 export async function getProducts(req, res) {
     try {
          
@@ -55,6 +60,8 @@ export async function getProducts(req, res) {
     }
 }
 
+
+// get all products
 export async function getProduct(req, res) {
     try {
             const currentProductId = req.params?.productId
@@ -72,6 +79,7 @@ export async function getProduct(req, res) {
 }
 
 
+// delete product
 export async function deleteProduct(req, res) {
     try {
             const currentProductId = req.params?.productId
@@ -92,6 +100,8 @@ export async function deleteProduct(req, res) {
     }
 }
 
+
+// update product
 
 export async function updateProduct(req, res) {
     try {

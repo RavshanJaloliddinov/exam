@@ -1,7 +1,7 @@
 import formidable from "formidable";
 import { fetchData } from "../database/postgres.js";
 
-// Create
+// Create order
 export async function addOrder(req, res) {
     const [fields] = await form.parse(req);
     const newOrder = await fetchData(
@@ -17,7 +17,7 @@ export async function addOrder(req, res) {
     });
 }
 
-// Read
+// get single order
 export async function getOrder(req, res) {
     const { id } = req.params;
 
@@ -34,7 +34,7 @@ export async function getOrder(req, res) {
     });
 }
 
-// Read All
+// get All orders
 export async function getAllOrders(req, res) {
     const orders = await fetchData('SELECT * FROM orders;');
     res.send({
@@ -43,7 +43,7 @@ export async function getAllOrders(req, res) {
     });
 }
 
-// Update
+// Update order
 export async function updateOrder(req, res) {
     const { id } = req.params;
 
@@ -68,7 +68,7 @@ export async function updateOrder(req, res) {
     });
 }
 
-// Delete
+// Delete order
 export async function deleteOrder(req, res) {
     const { id } = req.params;
 

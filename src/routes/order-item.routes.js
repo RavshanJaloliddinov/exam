@@ -4,6 +4,8 @@ import { updateOrder, addOrder, getOrder, deleteOrder, getAllOrders } from "../c
 
 const orderItemRoutes = Router();
 
+
+// orderItem CRUD routes
 orderItemRoutes
     .post('/', addOrder)
     .get('/', getAllOrders)

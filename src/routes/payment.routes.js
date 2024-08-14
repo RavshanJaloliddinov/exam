@@ -2,6 +2,8 @@ import { Router } from "express";
 import { addPayment, getPayment, deletePayment, getAllPayments, updatePayment } from "../controllers/payment.controller.js";
 const paymentRoutes = Router()
 
+
+// payment CRUD routes
 paymentRoutes
     .post('/', addPayment)
     .get('/', getAllPayments)

@@ -6,7 +6,7 @@ const form = formidable({
     keepExtensions: true,
     uploadDir: "uploads"
 });
-
+// create a new category
 export async function addCategory(req, res) {
     try {
             const [fields,files] = await form.parse(req)
@@ -26,7 +26,7 @@ export async function addCategory(req, res) {
         });
     }
 }
-
+// get all categories
 export async function getCategories(req, res) {
     try {
             const categoryNAme = await fetchData("SELECT * FROM category");
@@ -41,7 +41,7 @@ export async function getCategories(req, res) {
         });
     }
 }
-
+// get sin
 export async function getCategory(req, res) {
     try {
             const {id} = req.params
@@ -58,7 +58,7 @@ export async function getCategory(req, res) {
     }
 }
 
-
+// delete category
 export async function deleteCategory(req, res) {
     try {
             const { id } = req.params
@@ -78,7 +78,7 @@ export async function deleteCategory(req, res) {
     }
 }
 
-
+//update category
 export async function updateCategory(req, res) {
     try {
         const {id} = req.paramsparams.category
@@ -109,7 +109,7 @@ export async function updateCategory(req, res) {
 }
 
 
-export async function findAllProducts(req, res) {
+export async function searchProducts(req, res) {
     try {
         const searchItem = req.query["search"];
         if (!searchItem) {

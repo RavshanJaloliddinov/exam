@@ -4,7 +4,7 @@ import { getProduct, getProducts, addProduct, deleteProduct, updateProduct } fro
 
 const productRoutes= Router()   
 
-
+// payment CRUD routes
 productRoutes
     .post('/', addProduct)
     .get('/', getProducts)

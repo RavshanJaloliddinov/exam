@@ -3,6 +3,8 @@ import { Router } from "express";
 import { createContract, getContract, getContracts, deleteContract, updateContract } from "../controllers/contract.controller.js";
 const contractRoutes = Router();
 
+
+//contract CRUD routes
 contractRoutes
     .post("/", createContract)
     .get("/", getContracts)

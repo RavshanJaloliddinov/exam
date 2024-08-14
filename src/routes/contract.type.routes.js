@@ -3,6 +3,8 @@ import { Router } from "express";
 
 const contractTypeRoutes = Router();
 
+
+//contract CRUD routes
 contractTypeRoutes
     .post("/", createContractType)
     .get("/", getContractsType)
