@@ -9,6 +9,7 @@ import orderItemRoutes from "./routes/order-item.routes.js";
 import productRoutes from "./routes/products.routes.js";
 import contractTypeRoutes from "./routes/contract.type.routes.js";
 import customerRoutes from "./routes/customer.routes.js";
+import contractRoutes from "./routes/contract.routes.js";
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use("/order", orderRoutes);
 app.use("/order-items", orderItemRoutes)
 app.use("/contract-type", contractTypeRoutes)
 app.use("/payments", paymentRoutes);
+app.use("/contract", contractRoutes)
 
 
 // app listening

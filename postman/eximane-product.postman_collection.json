@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "4256ba98-b0c3-4463-90b8-c165409d28e4",
+		"name": "eximane-product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37052597"
+	},
+	"item": [
+		{
+			"name": "get-product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "a15",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "a seriyasi",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "count",
+							"value": "43",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"type": "file",
+							"src": "/C:/Users/HP/OneDrive/Рабочий стол/photo_2024-03-18_19-53-47.jpg"
+						}
+					]
+				},
+				"url": "http://localhost:3000/product"
+			},
+			"response": []
+		},
+		{
+			"name": "get-product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/product"
+			},
+			"response": []
+		},
+		{
+			"name": "get-products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/product"
+			},
+			"response": []
+		},
+		{
+			"name": "update-product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:3000/product/1"
+			},
+			"response": []
+		}
+	]
+}

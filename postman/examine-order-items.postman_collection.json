@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "bce1ed3d-9d5c-4b75-b7a1-32c5608ebb05",
+		"name": "examine-order-items",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37052597"
+	},
+	"item": [
+		{
+			"name": "get-order-items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/order-items"
+			},
+			"response": []
+		},
+		{
+			"name": "get-order-item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/order-items/2"
+			},
+			"response": []
+		},
+		{
+			"name": "add-order-item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/order-items"
+			},
+			"response": []
+		},
+		{
+			"name": "delete-order-item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/order-items/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update-order-item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:3000/order-items/1"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "0b7bc090-5361-4c85-b183-a7cfee4b2bc5",
+		"name": "eximane-customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37052597"
+	},
+	"item": [
+		{
+			"name": "add-customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "full_name",
+							"value": "Ravshan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jaloliddinov008",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "4006",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "132",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"type": "file",
+							"src": "postman-cloud:///1ef596c1-21b8-4c30-a283-c2709b2850d9"
+						}
+					]
+				},
+				"url": "http://localhost:3000/customer"
+			},
+			"response": []
+		},
+		{
+			"name": "get-customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/customer"
+			},
+			"response": []
+		},
+		{
+			"name": "del-customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/customer/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update-customer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "full_name",
+							"value": "00000",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "000",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "000",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "000",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"type": "file",
+							"src": "postman-cloud:///1ef596c1-21b8-4c30-a283-c2709b2850d9"
+						}
+					]
+				},
+				"url": "http://localhost:3000/customer/5"
+			},
+			"response": []
+		},
+		{
+			"name": "get-cutomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/customer/1"
+			},
+			"response": []
+		}
+	]
+}

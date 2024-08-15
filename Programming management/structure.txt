@@ -1,0 +1,137 @@
+
+1. Category (kategoriya)
+id (bigint): Kategoriyaning unikal identifikatori.
+name (varchar): Kategoriyaning nomi.
+image_url (varchar): Kategoriyaga tegishli rasm manzili.
+category_id (bigint): Kategoriyaning bog'liq bo'lgan boshqa kategoriya identifikatori (ya'ni, quyi kategoriyalar uchun).
+
+
+2. Product (mahsulot)
+id (bigint): Mahsulotning unikal identifikatori.
+title (varchar): Mahsulot nomi.
+description (text): Mahsulotning batafsil tavsifi.
+price (decimal): Mahsulotning narxi.
+rating (smallint): Mahsulot reytingi.
+category_id (bigint): Mahsulotning tegishli kategoriyasi.
+count (bigint): Mahsulot soni (mavjud miqdori).
+image_url (varchar): Mahsulot rasmining manzili.
+
+
+3. Customers (mijozlar)
+id (bigint): Mijozning unikal identifikatori.
+full_name (varchar): Mijozning to'liq ismi.
+email (text): Mijozning elektron pochta manzili.
+phone_number (varchar): Mijozning telefon raqami.
+password (varchar): Mijozning paroli.
+image_url (varchar): Mijozning profili uchun rasm manzili.
+
+
+4. Orders (buyurtmalar)
+id (bigint): Buyurtmaning unikal identifikatori.
+created_at (timestamp): Buyurtma yaratilgan vaqti.
+customer_id (bigint): Buyurtma qilgan mijoz identifikatori.
+address (text): Yetkazib berish manzili.
+order_status (text): Buyurtma holati (masalan, "yetkazildi", "kutilmoqda", va hokazo).
+
+
+5. Order Items (buyurtma elementlari)
+id (bigint): Buyurtma elementining unikal identifikatori.
+order_id (bigint): Buyurtma identifikatori.
+product_id (bigint): Mahsulot identifikatori.
+quantity (bigint): Buyurtma qilingan mahsulot miqdori.
+price (bigint): Mahsulotning buyurtma qilingan paytdagi narxi.
+
+
+6. Payments (to'lovlar)
+id (bigint): To'lovning unikal identifikatori.
+created_at (timestamp): To'lov amalga oshirilgan vaqti.
+customer_id (bigint): To'lov qilgan mijoz identifikatori.
+total_price (decimal): Umumiy to'lov summasi.
+contract_id (bigint): To'lov bilan bog'liq shartnoma identifikatori.
+
+
+7. Contract (shartnoma)
+id (bigint): Shartnomaning unikal identifikatori.
+customer_id (bigint): Shartnoma tuzgan mijoz identifikatori.
+order_id (bigint): Shartnoma tegishli bo'lgan buyurtma identifikatori.
+monthly_payment (bigint): Oylik to'lov miqdori.
+contract_type_id (bigint): Shartnoma turi identifikatori.
+contract_status (enum): Shartnoma holati (masalan, "faol", "to'xtatilgan").
+starting_payment_percent (bigint): Boshlang'ich to'lov foizi.
+total_payment (bigint): Umumiy to'lov summasi.
+
+
+8. Contract Type (shartnoma turi)
+id (bigint): Shartnoma turining unikal identifikatori.
+duration (integer): Shartnoma davomiyligi (oylar soni).
+percentage (decimal): Shartnoma foizi (yillik yoki oylik foiz stavkasi).
+
+
+                                                    Actions
+
+1. Category Actions
+Create Category: Yangi kategoriya qo'shish.
+Get All Categories: Barcha kategoriyalarni olish.
+Get Category by ID: Ma'lum bir ID bo'yicha kategoriya olish.
+Update Category: Ma'lum bir kategoriyani yangilash.
+Delete Category: Kategoriyani o'chirish.
+
+
+2. Product Actions
+Create Product: Yangi mahsulot qo'shish.
+Get All Products: Barcha mahsulotlarni olish.
+Get Product by ID: Ma'lum bir ID bo'yicha mahsulot olish.
+Update Product: Ma'lum bir mahsulotni yangilash.
+Delete Product: Mahsulotni o'chirish.
+
+
+3. Customer Actions
+Create Customer: Yangi mijoz qo'shish.
+Get All Customers: Barcha mijozlarni olish.
+Get Customer by ID: Ma'lum bir ID bo'yicha mijoz olish.
+Update Customer: Ma'lum bir mijozni yangilash.
+Delete Customer: Mijozni o'chirish.
+
+
+4. Order Actions
+Create Order: Yangi buyurtma qo'shish.
+Get All Orders: Barcha buyurtmalarni olish.
+Get Order by ID: Ma'lum bir ID bo'yicha buyurtma olish.
+Update Order: Ma'lum bir buyurtmani yangilash.
+Delete Order: Buyurtmani o'chirish.
+
+
+5. Order Item Actions
+Add Item to Order: Buyurtmaga mahsulot qo'shish.
+Get Items for Order: Buyurtmaga tegishli barcha mahsulotlarni olish.
+Update Order Item: Buyurtmadagi mahsulot miqdori yoki narxini yangilash.
+Remove Item from Order: Buyurtmadan mahsulotni o'chirish.
+
+
+6. Payment Actions
+Create Payment: Yangi to'lov qo'shish.
+Get All Payments: Barcha to'lovlarni olish.
+Get Payment by ID: Ma'lum bir ID bo'yicha to'lovni olish.
+Update Payment: To'lov ma'lumotlarini yangilash.
+Delete Payment: To'lovni o'chirish.
+
+
+7. Contract Actions
+Create Contract: Yangi shartnoma qo'shish.
+Get All Contracts: Barcha shartnomalarni olish.
+Get Contract by ID: Ma'lum bir ID bo'yicha shartnomani olish.
+Update Contract: Shartnoma ma'lumotlarini yangilash.
+Delete Contract: Shartnomani o'chirish.
+
+
+8. Contract Type Actions
+Create Contract Type: Yangi shartnoma turi qo'shish.
+Get All Contract Types: Barcha shartnoma turlarini olish.
+Get Contract Type by ID: Ma'lum bir ID bo'yicha shartnoma turini olish.
+Update Contract Type: Shartnoma turini yangilash.
+Delete Contract Type: Shartnoma turini o'chirish.
+
+
+
+
+

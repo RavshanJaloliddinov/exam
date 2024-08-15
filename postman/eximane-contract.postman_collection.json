@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "4e157e22-4c18-4b10-9dc3-a38cb7e8df75",
+		"name": "eximane-contract",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37052597"
+	},
+	"item": [
+		{
+			"name": "get-contracts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/contract"
+			},
+			"response": []
+		},
+		{
+			"name": "add-contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/contract"
+			},
+			"response": []
+		},
+		{
+			"name": "get-contract",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/contract/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete-contract",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/contract/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update-contract",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": "http://localhost:3000/contract/1"
+			},
+			"response": []
+		}
+	]
+}

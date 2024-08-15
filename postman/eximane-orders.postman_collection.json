@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "9dd2584e-45f9-4c1c-8b19-e1cce801e3a3",
+		"name": "eximane-orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37052597"
+	},
+	"item": [
+		{
+			"name": "add-order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/order"
+			},
+			"response": []
+		},
+		{
+			"name": "get-order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/order/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get-orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/order"
+			},
+			"response": []
+		},
+		{
+			"name": "update-order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:3000/order"
+			},
+			"response": []
+		},
+		{
+			"name": "delete-order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/order/1"
+			},
+			"response": []
+		}
+	]
+}

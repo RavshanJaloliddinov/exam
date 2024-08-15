@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "16b5104a-58bd-4cc5-ad6c-cbe62854070a",
+		"name": "examine-contract-type",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37052597"
+	},
+	"item": [
+		{
+			"name": "get-contract-type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/contract-type/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get-contracts-type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/contract-type"
+			},
+			"response": []
+		},
+		{
+			"name": "add-contract-type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/contract-type/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete=contract-type",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/contract-type/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update-contract-type",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": "http://localhost:3000/contract-type/1"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "4c36f0fa-4019-4c65-9267-8e14c5185ede",
+		"name": "eximane-payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37052597"
+	},
+	"item": [
+		{
+			"name": "get-payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/payments/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get-payments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/payments"
+			},
+			"response": []
+		},
+		{
+			"name": "update-payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/payments"
+			},
+			"response": []
+		},
+		{
+			"name": "delete-payment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/payments/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update-payment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:3000/payments/1"
+			},
+			"response": []
+		}
+	]
+}
